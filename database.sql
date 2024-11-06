@@ -16,6 +16,7 @@ CREATE TABLE IF NOT EXISTS students (
     admission_year YEAR NOT NULL,
     major_code INT NOT NULL,
     individual_id INT NOT NULL,
+    student_id VARCHAR(15) AS (CONCAT(admission_year, major_code, individual_id)) STORED,
     phone_number VARCHAR(15),
     address VARCHAR(100),
     credits_completed INT DEFAULT 0,
@@ -27,7 +28,7 @@ CREATE TABLE IF NOT EXISTS students (
 
 INSERT INTO students (student_name, admission_year, major_code, individual_id, phone_number, address)
 VALUES 
-    ('Kyle', 2022, 32, 11, '123-4567-8901', 'Washington DC, USA'),
-    ('James', 2021, 1, 13, '456-7890-0123', 'Venice, Italy'),
-    ('Layla', 2023, 32, 15, '123-0987-6543', 'Bangkok, Thailand'),
-    ('Minji', 2024, 32, 22, '234-5643-9087', 'Seoul, Korea');
+    ('Kyle', 2022, 32, 11, '123-4567-8901', 'Washington DC, USA', 3.6),
+    ('James', 2021, 1, 13, '456-7890-0123', 'Venice, Italy', 4.0),
+    ('Layla', 2023, 32, 15, '123-0987-6543', 'Bangkok, Thailand', 3.7),
+    ('Minji', 2024, 32, 22, '234-5643-9087', 'Seoul, Korea', 4.2);
