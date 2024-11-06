@@ -26,9 +26,9 @@ CREATE TABLE IF NOT EXISTS students (
     FOREIGN KEY (major_code) REFERENCES majors(major_code)
 );
 
-INSERT INTO students (student_name, admission_year, major_code, individual_id, phone_number, address, gpa)
+INSERT INTO students (student_name, admission_year, major_code, individual_id, phone_number, address, gpa, credits_completed)
 VALUES 
-    ('Kyle', 2022, 32, 11, '123-4567-8901', 'Washington DC, USA', 3.6),
-    ('James', 2021, 2, 13, '456-7890-0123', 'Venice, Italy', 4.0),
-    ('Layla', 2023, 32, 15, '123-0987-6543', 'Bangkok, Thailand', 3.7),
-    ('Minji', 2024, 32, 22, '234-5643-9087', 'Seoul, Korea', 4.2);
+    ('Kyle', 2022, 32, 11, '123-4567-8901', 'Washington DC, USA', 3.6, 110),
+    ('James', 2021, 2, 13, '456-7890-0123', 'Venice, Italy', 4.0, 65),
+    ('Layla', 2023, 32, 15, '123-0987-6543', 'Bangkok, Thailand', 3.7, 88),
+    ('Minji', 2024, 32, 22, '234-5643-9087', 'Seoul, Korea', 4.2, 125);
