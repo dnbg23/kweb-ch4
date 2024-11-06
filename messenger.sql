@@ -3,8 +3,8 @@ CREATE TABLE users (
     id INT AUTO_INCREMENT PRIMARY KEY, 
     user_id VARCHAR(50) UNIQUE NOT NULL,
     password VARCHAR(255) NOT NULL,
-    nickname VARCHAR(50) NOT NULL. 
-    profile_picture VARCHAR(255), --link
+    nickname VARCHAR(50) NOT NULL, 
+    profile_picture VARCHAR(255), 
     status_message VARCHAR(255), 
     is_deleted BOOLEAN DEFAULT 0, 
     signup_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
